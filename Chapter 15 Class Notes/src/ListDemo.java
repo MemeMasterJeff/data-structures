@@ -30,5 +30,12 @@ public class ListDemo
          */
         iterator.add("Juliet");//DHJ|RT
         iterator.add("Nina"); //DHJN|RT
+
+        /* enhanced for loope automatically creates an iterator! */
+        for (String n: staff){
+            if(n.equals("Harry")){
+                staff.add("Charlie");
+            }
+        }
     }
 }
