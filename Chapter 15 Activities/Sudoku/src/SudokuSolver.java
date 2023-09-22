@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class SudokuSolver {
@@ -13,7 +15,7 @@ public class SudokuSolver {
 
     public SudokuSolver(String fileName) {
         // read the puzzle file
-        try (Scanner in = new Scanner(new File(fileName))) {
+        try (Scanner in = new Scanner(new File("puzzle1.txt"), StandardCharsets.UTF_8)) {
 
             this.grid = new int[N][N];
 
@@ -28,16 +30,26 @@ public class SudokuSolver {
                     } else {
                         number = Integer.parseInt(strVal);
                     }
+                    System.out.println(number);
                     this.grid[row][col] = number;
                 }
             }
         } catch (FileNotFoundException e) {
             System.out.println("Cannot open: " + fileName);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
         // create the list of sets for each row (this.rows)
         // ...
-
+        assert grid != null;
+        for (int[] ints : grid) {
+            Set<Integer> row = new HashSet<>();
+            for (int c = 0; c < grid.length; c++) {
+                row.add(ints[c]);
+            }
+            this.rows.add(row);
+        }
         // create the list of sets for each col (this.cols)
         // ...
 
@@ -141,7 +153,7 @@ public class SudokuSolver {
     }
 
     public static void main(String[] args) {
-        String fileName = "src/puzzle1.txt";
+        String fileName = "puzzle1.txt";
 
         SudokuSolver solver = new SudokuSolver(fileName);
         System.out.println(solver);
