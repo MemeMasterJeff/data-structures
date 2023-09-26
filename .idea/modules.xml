@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Class Notes/Chapter 15 Class Notes.iml" filepath="$PROJECT_DIR$/Chapter 15 Class Notes/Chapter 15 Class Notes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Class Notes/Chapter 16 Class Notes.iml" filepath="$PROJECT_DIR$/Chapter 16 Class Notes/Chapter 16 Class Notes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Class Notes/Chapter 17 Class Notes.iml" filepath="$PROJECT_DIR$/Chapter 17 Class Notes/Chapter 17 Class Notes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/Contains/Contains.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/Contains/Contains.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/CountLeaves/CountLeaves.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/CountLeaves/CountLeaves.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/CountNodesWithOneChild/CountNodesWithOneChild.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/CountNodesWithOneChild/CountNodesWithOneChild.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/DepthFirst/DepthFirst.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/DepthFirst/DepthFirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/DistanceFinder/DistanceFinder.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/DistanceFinder/DistanceFinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Downsize/Downsize.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Downsize/Downsize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Driveway/Driveway.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Driveway/Driveway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/FirstLetterMap/FirstLetterMap1/FirstLetterMap1.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/FirstLetterMap/FirstLetterMap1/FirstLetterMap1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/FirstLetterMap/FirstLetterMap2/FirstLetterMap2.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/FirstLetterMap/FirstLetterMap2/FirstLetterMap2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/FirstToLast/FirstToLast.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/FirstToLast/FirstToLast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/FloodFill/FloodFill.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/FloodFill/FloodFill.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/FloodFillQueue/FloodFillQueue.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/FloodFillQueue/FloodFillQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Gradebook/Gradebook.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Gradebook/Gradebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/GuessingGame/GuessingGame.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/GuessingGame/GuessingGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/HTMLChecker/HTMLChecker.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/HTMLChecker/HTMLChecker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/HashSet/HashSet.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/HashSet/HashSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/HuffmanEncoding/HuffmanEncoding.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/HuffmanEncoding/HuffmanEncoding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/IntegerSplitter/IntegerSplitter.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/IntegerSplitter/IntegerSplitter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint1/LabeledPoint1.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint1/LabeledPoint1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint2/LabeledPoint2.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint2/LabeledPoint2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint3/LabeledPoint3.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/LabeledPoint/LabeledPoint3/LabeledPoint3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/LastToFirst/LastToFirst.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/LastToFirst/LastToFirst.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MorseCode/MorseCode.iml" filepath="$PROJECT_DIR$/MorseCode/MorseCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/OpenAddressing/OpenAddressing.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/OpenAddressing/OpenAddressing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/PermutationGenerator/PermutationGeneratorQueue/PermutationGeneratorQueue.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/PermutationGenerator/PermutationGeneratorQueue/PermutationGeneratorQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/PermutationGenerator/PermutationGeneratorStack/PermutationGeneratorStack.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/PermutationGenerator/PermutationGeneratorStack/PermutationGeneratorStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Polynomial/Polynomial.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Polynomial/Polynomial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/RecursiveContains/RecursiveContains.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/RecursiveContains/RecursiveContains.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/RecursiveSize/RecursiveSize.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/RecursiveSize/RecursiveSize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/Reverse/Reverse.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/Reverse/Reverse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Reverse/Reverse1.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Reverse/Reverse1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/SentenceReverser/SentenceReverser.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/SentenceReverser/SentenceReverser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Sieve/Sieve.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Sieve/Sieve.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 16 Activities/Size/Size.iml" filepath="$PROJECT_DIR$/Chapter 16 Activities/Size/Size.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/StringLengthMap/StringLengthMap.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/StringLengthMap/StringLengthMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/Sudoku/Sudoku.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/Sudoku/Sudoku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 15 Activities/ToDoList/ToDoList.iml" filepath="$PROJECT_DIR$/Chapter 15 Activities/ToDoList/ToDoList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter 17 Activities/Visitors/Visitors.iml" filepath="$PROJECT_DIR$/Chapter 17 Activities/Visitors/Visitors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/data-structures.iml" filepath="$PROJECT_DIR$/.idea/data-structures.iml" />
+    </modules>
+  </component>
+</project>

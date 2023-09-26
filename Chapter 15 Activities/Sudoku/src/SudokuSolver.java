@@ -15,7 +15,7 @@ public class SudokuSolver {
 
     public SudokuSolver(String fileName) {
         // read the puzzle file
-        try (Scanner in = new Scanner(new File("puzzle1.txt"), StandardCharsets.UTF_8)) {
+        try (Scanner in = new Scanner(new File("D:\\Documents\\GitHub\\data-structures\\Chapter 15 Activities\\Sudoku\\src\\puzzle1.txt"), StandardCharsets.UTF_8)) {
 
             this.grid = new int[N][N];
 
@@ -52,7 +52,15 @@ public class SudokuSolver {
         }
         // create the list of sets for each col (this.cols)
         // ...
+        for (int col = 0; col < N; col++) {
+            Set<Integer> colSet = new HashSet<>();
 
+            for (int row = 0; row < N; row++) {
+                colSet.add(this.grid[row][col]);
+            }
+
+            this.cols.add(colSet);
+        }
         // create the list of sets for each square (this.squares)
         /* the squares are added to the list row-by-row:
             0 1 2
@@ -60,7 +68,22 @@ public class SudokuSolver {
             6 7 8
          */
         // ...
+        for (int square = 0; square < N; square++) {
+            Set<Integer> squareSet = new HashSet<>();
 
+            int startRow = (square / M) * M;
+            int startCol = (square % M) * M;
+
+            // Iterate through the cells in the current square
+            for (int row = startRow; row < startRow + M; row++) {
+                for (int col = startCol; col < startCol + M; col++) {
+                    squareSet.add(this.grid[row][col]);
+                }
+            }
+
+            // Add the squareSet to this.squares
+            this.squares.add(squareSet);
+        }
         // create a hash set for [1..9] (this.nums)
         // ...
 
