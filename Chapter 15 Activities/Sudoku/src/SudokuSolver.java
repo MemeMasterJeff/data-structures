@@ -8,7 +8,7 @@ public class SudokuSolver {
     private final int M = 3;
     private final int N = M * M;
     private int[][] grid;
-    private ArrayList<Set<Integer>> rows;
+    private final ArrayList<Set<Integer>> rows;
     private ArrayList<Set<Integer>> cols;
     private ArrayList<Set<Integer>> squares;
     private Set<Integer> nums;
@@ -42,20 +42,20 @@ public class SudokuSolver {
 
         // create the list of sets for each row (this.rows)
         // ...
-        this.rows = new ArrayList<Set<Integer>>();
+        this.rows = new ArrayList<>();
         if (grid != null) {
             for (int[] ints : grid) {
                 Set<Integer> row = new HashSet<>();
                 for (int c = 0; c < N; c++) {
                     row.add(ints[c]);
-                    System.out.print(ints[c]);
+                    //System.out.print(ints[c]);
                 }
-                System.out.println();
+                //System.out.println();
                 this.rows.add(row);
             }
             // create the list of sets for each col (this.cols)
             // ...
-            this.cols = new ArrayList<Set<Integer>>();
+            this.cols = new ArrayList<>();
             for (int col = 0; col < N; col++) {
                 Set<Integer> colSet = new HashSet<>();
 
@@ -72,6 +72,7 @@ public class SudokuSolver {
             6 7 8
          */
             // ...
+            this.squares = new ArrayList<>();
             for (int square = 0; square < N; square++) {
                 Set<Integer> squareSet = new HashSet<>();
 
@@ -90,7 +91,7 @@ public class SudokuSolver {
             }
             // create a hash set for [1..9] (this.nums)
             // ...
-            nums = new HashSet<>();
+            this.nums = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
             // visually inspect that all the sets are correct
             for (int row = 0; row < N; row++) {
                 System.out.println("row " + row + ": " + this.rows.get(row));
@@ -134,9 +135,14 @@ public class SudokuSolver {
             Properly indexing the squares list of sets is tricky. Verify that your
             algorithm is correct.
          */
-        Set<Integer> possibleNums = new HashSet<Integer>();
-        possibleNums.addAll(this.nums);
+        Set<Integer> possibleNums = new HashSet<>(this.nums);
+        Set<Integer> rowSet = this.rows.get(nextRow);
+        Set<Integer> colSet = this.cols.get(nextCol);
+        Set<Integer> squareSet = this.squares.get((nextRow / M) * M + (nextCol / M));
 
+        possibleNums.removeAll(rowSet);
+        possibleNums.removeAll(colSet);
+        possibleNums.removeAll(squareSet);
         // ...
 
         // if there are no possible numbers, we cannot solve the board in its current state
@@ -148,7 +154,10 @@ public class SudokuSolver {
         for (Integer possibleNum : possibleNums) {
             // update the grid and all three corresponding sets with possibleNum
             // ...
-
+            this.grid[nextRow][nextCol] = possibleNum;
+            rowSet.add(possibleNum);
+            colSet.add(possibleNum);
+            squareSet.add(possibleNum);
             // recursively solve the board
             if (this.solve()) {
                 // the board is solved!
@@ -160,6 +169,10 @@ public class SudokuSolver {
                  sets.
                  */
                 // ...
+                this.grid[nextRow][nextCol] = 0;
+                rowSet.remove(possibleNum);
+                colSet.remove(possibleNum);
+                squareSet.remove(possibleNum);
             }
         }
 
@@ -167,17 +180,17 @@ public class SudokuSolver {
     }
 
     public String toString() {
-        String str = "";
+        StringBuilder str = new StringBuilder();
 
         for (int[] row : grid) {
             for (int val : row) {
-                str += val + "\t";
+                str.append(val).append("\t");
             }
 
-            str += "\n";
+            str.append("\n");
         }
 
-        return str;
+        return str.toString();
     }
 
     public static void main(String[] args) {
@@ -189,7 +202,7 @@ public class SudokuSolver {
             System.out.println("Solved!");
             System.out.println(solver);
         } else {
-            System.out.println("Unsolveable...");
+            System.out.println("Unsolvable...");
         }
     }
 }
