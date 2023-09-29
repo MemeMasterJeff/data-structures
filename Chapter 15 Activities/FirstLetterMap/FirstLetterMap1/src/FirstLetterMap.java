@@ -18,7 +18,7 @@ public class FirstLetterMap
         {
 
             // Create your map here
-            Map<String,String> stringMap = new HashMap<>();
+            Map<Character,String> stringMap = new HashMap<>();
 
             while (in.hasNext())
             {
@@ -27,7 +27,7 @@ public class FirstLetterMap
 
                 // Update the map here
                 // Use the Java 8 merge method
-                . . .
+                stringMap.put(c, word);
 
             }
 
