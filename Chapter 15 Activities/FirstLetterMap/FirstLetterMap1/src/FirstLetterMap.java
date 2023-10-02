@@ -27,7 +27,7 @@ public class FirstLetterMap
 
                 // Update the map here
                 // Use the Java 8 merge method
-                stringMap.merge(c, 1,
+                stringMap.merge(c, new HashSet<String>(Arrays.asList(word)),(oldValue, newValue) -> (merger(oldValue,newValue)));
 
             }
 
@@ -43,7 +43,11 @@ public class FirstLetterMap
             System.out.println("Cannot open: " + filename);
         }
     }
+    public static Set<String> merger(Set<String> oldvalue, Set<String> newvalue){
+        Set<String> wrkingSet = new HashSet<>();
 
+        return wrkingSet;
+    }
     public static String clean(String s)
     {
         String r = "";
