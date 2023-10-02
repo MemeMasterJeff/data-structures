@@ -27,13 +27,17 @@ public class FirstLetterMap
 
                 // Update the map here
                 // Use the Java 8 merge method
-                stringMap.put(c, word);
+                stringMap.merge(c, 1,
 
             }
 
             // Print the map here in this form
             // a: [a, able, aardvark]
-            . . .
+            stringMap.entrySet().stream()
+                    .sorted(Map.Entry.comparingByKey())
+                    .forEach(entry -> {
+                        System.out.println(entry.getKey() + ": " + entry.getValue());
+                    });
         } catch (FileNotFoundException e)
         {
             System.out.println("Cannot open: " + filename);
