@@ -49,7 +49,7 @@ public class Driveway
     public void remove(int licensePlate)
     {
         // Complete this method
-        while(driveway.peek()!=licensePlate){
+        while(driveway.peek()!=licensePlate && !driveway.isEmpty()){
             int car = driveway.pop();
             street.add(car);
         }
