@@ -1,3 +1,4 @@
+import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
 /**
@@ -71,14 +72,16 @@ public class LinkedList
         Returns an iterator for iterating through this list.
         @return an iterator for iterating through this list
     */
-
+    public ListIterator listIterator(){
+        return new LinkedListIterator();
+    }
 
 
 
 
     //Class Node
     static class Node<T>{
-        public T item;
+        public Object item;
         public Node<T> prev,next;
 
         Node(Node<T> prev, Node<T> next, T item){
@@ -88,31 +91,37 @@ public class LinkedList
         }
     }
 
-    class LinkedListIterator //implements ListIterator
+    class LinkedListIterator implements ListIterator
     {
       //private data
-
+        private Node<T> pos,last;
+        private boolean moved;
 
         /**
             Constructs an iterator that points to the front
             of the linked list.
         */
+        public LinkedListIterator(){
 
+        }
 
         /**
             Moves the iterator past the next element.
             @return the traversed element
         */
         public Object next(){
-            previous = position;
+            if(!hasNext()){
+                throw new NoSuchElementException();
+            }
+            prev = pos;
             isAfterNext = true;
 
-            if(position = null){
-                position = first;
+            if(pos == null){
+                pos = first;
             }else{
-                position = position.next;
+                pos = pos.next;
             }
-            return position.item;
+            return pos.item;
         }
 
 
@@ -122,14 +131,29 @@ public class LinkedList
             Tests if there is an element after the iterator position.
             @return true if there is an element after the iterator position
         */
-
+        public boolean hasNext(){
+            return pos != null;
+        }
 
         /**
             Adds an element before the iterator position
             and moves the iterator past the inserted element.
             @param element the element to add
         */
-
+        public void add(Object element){
+            //check if the iterator is at the beginning of thee list
+            if (pos == null){
+                addFirst(element);
+                pos = first;
+            }
+            else {
+                Node newNode = new Node();
+                newNode.item = element;
+                newNode.next = pos.next;
+                pos.next = newNode;
+                pos = newNode;
+            }
+        }
 
 
 
@@ -139,7 +163,15 @@ public class LinkedList
             Removes the last traversed element. This method may
             only be called after a call to the next() method.
         */
-
+        public void remove(){
+            if(!isAfterNext){
+                throw new IllegalStateException();
+            }
+        }
+        if(pos == first){
+            removeFirst();
+            pos = null;
+    }
 
 
 
@@ -150,9 +182,13 @@ public class LinkedList
             Sets the last traversed element to a different value.
             @param element the element to set
         */
+        @Override
+        public void set(Object element) {
+            if(!isAfterNext){
+            throw new IllegalStateException();
+            }
 
-
-
-
+            pos.item = element;
+        }
     }//LinkedListIterator
 }//LinkedList
