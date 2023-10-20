@@ -1,4 +1,5 @@
 import java.util.NoSuchElementException;
+import java.util.Queue;
 
 /**
     An implementation of a queue as a circular array.
@@ -31,7 +32,12 @@ public class CircularArrayQueue
         Adds an element to the tail of this queue.
         @param newElement the element to add
     */
-
+    public void add(Object newElement){
+        this.currentSize++;
+        this.elements[this.tail] = newElement;
+        this.tail++;
+        this.tail %= this.elements.length;
+    }
 
 
 
@@ -40,7 +46,15 @@ public class CircularArrayQueue
         Removes an element from the head of this queue.
         @return the removed element
     */
-
+    public Object remove(){
+        if (this.empty()){
+            throw new NoSuchElementException();
+        }
+        this.currentSize--;
+        Object element = this.elements[this.head];
+        this.head = (this.head+1) % this.elements.length;
+        return element;
+    }
 
 
 
