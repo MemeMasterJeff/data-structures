@@ -1,5 +1,3 @@
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -13,28 +11,33 @@ import java.io.FileNotFoundException;
 public class WordAnalysis
 {
     public static void main(String[] args)
-            throws IOException
+        throws FileNotFoundException
     {
-        Set<String> dictionaryWords = readWords("words");
-        Set<String> novelWords = readWords("throughTheLookingGlass.txt");
-
-        for(String word:novelWords){
-            if(!dictionaryWords.contains(word)){
+        // Read the dictionary and novel
+        Set<String> dictionaryWords = readWords("Chapter 15 Class Notes/src/words");
+        Set<String> novelWords = readWords("Chapter 15 Class Notes/src/throughTheLookingGlass.txt");
+        
+        // Print all the words from the novel, not in the dictionary
+        for (String word: novelWords) {
+            if (!dictionaryWords.contains(word)) {
                 System.out.println(word);
             }
         }
 
-        //print no. of words in the novel
-        System.out.println("words in novel: " + novelWords.size());
+        // Print the number of unique words in the novel
+        System.out.println("There are "+novelWords.size()+" unique words in the novel.");
 
-        //print thee number of unique words with >3 letters
+        // Print the number of unique words with >3 letters
         Iterator<String> iterator = novelWords.iterator();
-        while(iterator.hasNext()){
-            if(iterator.next().length() <=3){
+        while (iterator.hasNext()) {
+            if (iterator.next().length() <= 3) {
                 iterator.remove();
             }
         }
-        System.out.println("There are "+novelWords.size()+"unique words with more than 3 letters");
+        System.out.println("There are "+novelWords.size()+" unique words with more than three letters in the novel.");
+
+    
+        
     }
 
     /**
@@ -45,16 +48,20 @@ public class WordAnalysis
      * word is a sequence of upper- and lowercase letters.
     */
     public static Set<String> readWords(String filename)
-            throws IOException,FileNotFoundException{
-        Set<String> words  = new HashSet<>();
-
-        Scanner in = new Scanner(new File("Chapter 15 Class Notes/src/"+filename), StandardCharsets.UTF_8);
-        //use any character that is not a letter as delimiter
+        throws FileNotFoundException
+    {
+        Set<String> words = new HashSet<>();
+       // System.out.println(System.getProperty("user.dir"));
+        Scanner in = new Scanner(new File(filename), "UTF-8");
+        
+        // Use any character other than letters as delimeters
         in.useDelimiter("[^a-zA-Z]+");
 
-        while(in.hasNext()){
+        // Adding words to our set (duplicates are ignored)
+        while (in.hasNext()) {
             words.add(in.next().toLowerCase());
         }
+
         return words;
     }
 }

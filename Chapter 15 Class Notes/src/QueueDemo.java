@@ -7,27 +7,28 @@ import java.util.Queue;
 */
 public class QueueDemo
 {
-    public static void main(String[] args) {
-        //simulate a printer queue
-        Queue<String> printer = new LinkedList<>();
+    public static void main(String[] args)
+    {
+        // Create a print queue of strings (using a linked link)
+        Queue<String> jobs = new LinkedList<>();
 
-        //add some print jobs
-        printer.add("Joe: Expense report 2023");
-        printer.add("Cathy: Top Secret Document #5");
+        // Add some print jobs
+        jobs.add("Joe: Expense Report 2023");
+        jobs.add("Cathy: Top Secret Document #5");
 
-        System.out.println("Printing: "+printer.remove());
+        System.out.println("Printing: "+jobs.remove());
 
-        printer.add("Cathy: Really Top Secret Document #2");
-        printer.add("Joe: Grocery List");
-        printer.add("Cathy: Can I Get Fired For This?");
+        jobs.add("Cathy: Really Top Secret Document #2");
+        jobs.add("Joe: Grocery List");
+        jobs.add("Cathy: Can I Get Fired For This?");
 
-        System.out.println("Printing: "+printer.remove());
+        System.out.println("Printing: "+jobs.remove());
 
-        printer.add("Boss: Cathy's Termination Letter");
+        jobs.add("Boss: Cathy's Termination Letter");
 
-        //Print the rest of the jobs in thee queue
-        while(!(printer.isEmpty())){
-            System.out.println(printer.remove());
+        // Print the rest of the jobs in the queue
+        while (jobs.size() > 0) {
+            System.out.println("Printing: "+jobs.remove());
         }
     }
 }

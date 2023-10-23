@@ -1,5 +1,6 @@
-import java.awt.*;
+import java.awt.Color;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
@@ -10,25 +11,28 @@ public class MapDemo
 {
     public static void main(String[] args)
     {
-        /* the map interface is generic. the first type is the type of the key
-        * the second type is the type of the value*/
-        Map<String, Color> favColors = new HashMap<>();
+        /* The Map interface is generic. 
+        The first type is the type of the key.
+        The second type is the type of the value. */
+        Map<String, Color> favColors = new HashMap<> ();
 
         favColors.put("Hyder", Color.RED);
         favColors.put("Athena", Color.MAGENTA);
-        favColors.put("Baavya", Color.BLUE);
+        favColors.put("Bavya", Color.BLUE);
 
         // Two different keys can have the same value
-        favColors.put("Mitch", Color.RED);
+        favColors.put("Mitchell", Color.RED);
 
-        //the same key cannot have two different values
-        //using put again changes the value
+        // The same key CANNOT have two different values
+        // Using put for a key that exists changes the value
         favColors.put("Athena", Color.ORANGE);
 
-        //Create a set of the keys in a map
+        System.out.println(favColors.get("Athena"));
+
+        // Create a set of the keys in a map
         Set<String> keys = favColors.keySet();
-        for(String key:keys){
-            System.out.println(key + " ("+key.hashCode()+"); "+favColors.get(key));
+        for (String key: keys) {
+            System.out.println(key + " ("+key.hashCode()+"): "+favColors.get(key));
         }
-     }
+    }
 }
