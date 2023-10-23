@@ -13,7 +13,7 @@ public class ListDemo
         students.addFirst("William");
         students.addFirst("Addison");
 
-        ListIterator iterator = students.listIterator();
+        ListIterator<String> iterator = students.listIterator();
         iterator.next();
         iterator.add("Hyder");
         iterator.next();

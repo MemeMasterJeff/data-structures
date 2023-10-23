@@ -6,8 +6,7 @@ import java.util.NoSuchElementException;
  * contains a subset of the methods of the standard
  * java.util.LinkedList class.
 */
-public class LinkedList
-{
+public class LinkedList extends java.util.LinkedList {
     /** first refers to the first node in this list
      * If the list is empty, first is null
      */
