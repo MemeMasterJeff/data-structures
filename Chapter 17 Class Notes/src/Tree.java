@@ -4,30 +4,35 @@ import java.util.ArrayList;
 /**
     A tree in which each node has an arbitrary number of children.
 */
-public class Tree
-{
-    
+public class Tree{
     static class Node
     {
-        
+        public List<Node> children;
+        public Object data;
 
         /**
             Computes the size of the subtree whose root is this node.
             @return the number of nodes in the subtree
         */
-        public int size()
-        {
-            return 0;
+        public int size() {
+            int sum = 1;
+            for(Node child: this.children){
+                sum += child.size();
+            }
+            return sum;
         }
     }
 
+    private Node root;
     /**
         Constructs a tree with one node and no children.
         @param rootData the data for the root
     */
     public Tree(Object rootData)
     {
-        
+        this.root = new Node();
+        this.root.data = rootData;
+        this.root.children = new ArrayList<>();
     }
 
     /**
@@ -35,7 +40,7 @@ public class Tree
     */
     public void addSubtree(Tree subtree)
     {
-        
+        this.root.children.add(subtree.root);
     }
 
     /**
