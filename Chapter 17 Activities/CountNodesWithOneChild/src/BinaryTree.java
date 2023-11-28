@@ -51,7 +51,13 @@ public class BinaryTree
         public Node left;
         public Node right;
     }
-
+    /**
+        Returns the number of nodes with one child
+    */
+    public int countNodesWithOneChild(){
+        int count;
+        Node node = root;
+    }
     /**
         Returns the height of the subtree whose root is the given node.
         @param n a node or null
