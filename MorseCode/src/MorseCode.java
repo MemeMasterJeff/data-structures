@@ -21,7 +21,7 @@ public class MorseCode
         decodeTree = new TreeNode(' ', null, null);  // autoboxing
         // put a space in the root of the decoding tree
         //sort of fixed space null issue
-        addSymbol(' ', " ");
+        addSymbol(' ', "");
         addSymbol('A', ".-");
         addSymbol('B', "-...");
         addSymbol('C', "-.-.");
@@ -137,7 +137,7 @@ public class MorseCode
             if(morse.charAt(i) == ' '){
                 text.append(decode.getValue());
                 if(i+1<morse.length() && morse.charAt(i+1)==' '){
-                    text.append(" ");
+                    //text.append(" ");
                     i++;
                 }
                 //resets tree for next segment
