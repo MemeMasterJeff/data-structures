@@ -20,7 +20,8 @@ public class MorseCode
         codeMap = new TreeMap<Character, String>();
         decodeTree = new TreeNode(' ', null, null);  // autoboxing
         // put a space in the root of the decoding tree
-
+        //sort of fixed space null issue
+        addSymbol(' ', " ");
         addSymbol('A', ".-");
         addSymbol('B', "-...");
         addSymbol('C', "-.-.");
@@ -112,7 +113,9 @@ public class MorseCode
             if(text.charAt(i)==' '){
                 morse.append(" ");
             }
+            //gets the sequence of morse code for that character
             character = codeMap.get(text.toUpperCase().charAt(i))+" ";
+            System.out.println(character + " " + text.toUpperCase().charAt(i));
             morse.append(character);
         }
 
